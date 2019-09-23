@@ -1,0 +1,27 @@
+GET
+Curl â€“H â€œtoken: â€œ  http://localhost:8080/psicocare/api/) (menu , homeactivities, login, taketest1 progress, config, aboutus)
+
+GET NEW USER
+EXISTE ID DE USUARIO
+curl http://localhost:8080/Psicocare/api/users/13 -v
+NO EXISTE ID DE USUARIO
+curl http://localhost:8080/Psicocare/api/users/13 -v
+
+
+POST NEW USER
+
+
+curl -X POST -d "{\"id\":0,\"name\":\"belen \",\"email\":\"belen_lau@hotmail.com \", \"password\":\"eligetu \", \"username\":\"belen1990 \"}"         -H "Content-Type: application/json"    http://localhost:8080/Psicocare/api/users -v
+PUT
+UPDATE USER
+curl -X PUT -d "{\"email\":\"b@b.es\",\"name\":\"belen\", \"password\":\"belen\",\"username\":\"belen\"}" -H "Content-Type: application/json" http://localhost:8080/Psicocare/api/users/2 -v
+
+UPDATE TEST
+curl -X PUT -d "{\" tid \":1, ,\" respuesta1\":1,\" respuesta2\":2,\" respuesta3\":3,\" respuesta4\":4,\" respuesta5\":5,\" anxiety\":1,\" depression\":1,\" social anxiety\":1,\" stress\":1}"  -H "token" http://localhost:8080/psicocare/api/profile/â€�idâ€�/taketest1 â€“v
+(int tid, int respuesta1, int respuesta2, int respuesta3, int respuesta4, int respuesta5, double anxiety,	double depression, double social_anxiety, double stress)
+
+DELETE
+
+DELETE USER
+
+curl -X DELETE  http://localhost:8080/Psicocare/api/users/15 -v
